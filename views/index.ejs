@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DUCK DELIVERY</title>
+	<link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<%- include("partials/header.ejs") %>
+	<main>
+		<section id="sliderSection">
+			<div class="banner__carousel">
+        		<div class="carousel-item fade">
+            	<img src="img/slider.jpeg" style="width: 100%;" alt="">
+        		</div>
+        		<div class="carousel-item fade">
+            	<img src="img/slider1.jpeg" style="width: 100%;" alt="">
+        		</div>
+        		<div class="carousel-item fade">
+            	<img src="img/slider2.jpeg" style="width: 100%;" alt="">
+        		</div>
+        		<a class="prev" onclick="addSlide(-1)">&#10094</a>
+        		<a class="next" onclick="addSlide(1)">&#10095</a>
+    		</div>
+			<script src="js/slider.js"></script>
+		</section>
+		<section class="recommended">
+			<div class="block-title">
+				Мы рекомендуем
+			</div>
+			<div class="products-list">
+				<div class="product-item">
+					<a href="../product/3" class="product-img">
+						<img src="img/pizza-margarita.jpeg" alt="Маргарита">
+					</a>
+					<div class="product-properties">
+            		<div class="product-title">
+                		<a href="../product/3">
+                    		Маргарита
+                		</a>
+            		</div>
+            		<div class="product-top">
+                		<div class="product-weight">
+                     	460 г
+                  	</div>
+                  </div>
+           			<div class="product-description">
+                		Соус маринара, помидоры, сыр моцарелла, соус песто
+            		</div>
+       			</div>
+       			<div class="price-gift">
+       				<div class="price">8,60 руб</div>
+       			</div>
+       			<div class="price-cart cartJS" data-id="3">
+       				<div class="btn-buy">
+       					<span>В корзину</span>
+       				</div>
+       			</div>
+				</div>
+				<div class="product-item">
+					<a href="../product/4" class="product-img">
+						<img src="img/pizza-diablo.jpeg" alt="Диабло">
+					</a>
+					<div class="product-properties">
+            		<div class="product-title">
+                		<a href="../product/4">
+                    		Диабло
+                		</a>
+            		</div>
+            		<div class="product-top">
+                		<div class="product-weight">
+                     	530 г
+                  	</div>
+                  </div>
+           			<div class="product-description">
+                		Сыр моцарелла, пепперони, перец чили, перец болгарский, лук репчатый, соус ВВQ, соус чили, петрушка
+            		</div>
+       			</div>
+       			<div class="price-gift">
+       				<div class="price">15,90 руб</div>
+       			</div>
+       			<div class="price-cart cartJS" data-id="4">
+       				<div class="btn-buy">
+       					<span>В корзину</span>
+       				</div>
+       			</div>
+				</div>
+				<div class="product-item">
+					<a href="../product/1" class="product-img">
+						<img src="img/pizza-hunter.jpeg" alt="Охотничья">
+					</a>
+					<div class="product-properties">
+            		<div class="product-title">
+                		<a href="../product/1">
+                    		Охотничья
+                		</a>
+            		</div>
+            		<div class="product-top">
+                		<div class="product-weight">
+                     	500 г
+                  	</div>
+                  </div>
+           			<div class="product-description">
+                		Охотничьи колбаски, молочные колбаски, сыр моцарелла, вешенки, шампиньоны, сладкий лук, перец болгарский, соус BBQ, соус маринара.
+            		</div>
+       			</div>
+       			<div class="price-gift">
+       				<div class="price">11,80 руб</div>
+       			</div>
+       			<div class="price-cart cartJS" data-id="1">
+       				<div class="btn-buy">
+       					<span>В корзину</span>
+       				</div>
+       			</div>
+				</div>
+				<div class="product-item">
+					<a href="../product/9" class="product-img">
+						<img src="img/atlantik.jpeg" alt="Атлантик">
+					</a>
+					<div class="product-properties">
+            		<div class="product-title">
+                		<a href="../product/9">
+                    		Атлантик сет
+                		</a>
+            		</div>
+            		<div class="product-top">
+                		<div class="product-weight">
+                     	46 шт, 1250 г
+                  	</div>
+                  </div>
+           			<div class="product-description">
+                		Ролл №1 - Филадельфия унаги:
+							Ролл с угрем панко, сурими кимчи, грушей и сливочным сыром в икре тобико и кунжуте.
+							Ролл №2 - Зеленый дракон:
+							Ролл с угрем панко, сливочным сыром, авокадо, Тамаго, огурцом, кунжутом и соусом унаги.
+							Ролл №3 - Феликс ролл с угрем:
+							Ролл с угрем, лососем, окунем, сурими кимчи, сливочным сыром, огурцом, Тамаго, соусом спайси и соусом унаги.
+							Ролл №4 - Унаги-сяке Филадельфия:
+							Ролл с угрем и лососем, сливочным сыром, сыром дор блю и грушей.
+							Ролл №5 - Унаги маки:
+							Маки с угрем, огурцом, соусом спайси и соусом унаги.
+							Ролл №6 - Унаги рору:
+							Ролл с угрем, лососем, окунем, сурими кимчи, сливочным сыром, огурцом, Тамаго и соусом унаги.
+            		</div>
+       			</div>
+       			<div class="price-gift">
+       				<div class="price">34,90 руб</div>
+       			</div>
+       			<div class="price-cart cartJS" data-id="9">
+       				<div class="btn-buy">
+       					<span>В корзину</span>
+       				</div>
+       			</div>
+				</div>
+				<div class="product-item">
+					<a href="../product/10" class="product-img">
+						<img src="img/kaliforniya.jpeg" alt="КалифорнияL">
+					</a>
+					<div class="product-properties">
+            		<div class="product-title">
+                		<a href="../product/10">
+                    		Калифорния L
+                		</a>
+            		</div>
+            		<div class="product-top">
+                		<div class="product-weight">
+                     	52 шт., 1310 г
+                  	</div>
+                  </div>
+           			<div class="product-description">	
+                	Ролл №1: Ролл с мясом криля, авокадо и огурцом в икре тобико. 
+						Ролл №2: Ролл с филе лосося, авокадо, огурцом и соусом васаби в икре тобико. 
+						Ролл №3: ролл с филе лосося панко, мясом криля, огурцом, салатом Айсберг и соусом тар-тар в икре тобико. 
+						Ролл №4: ролл с филе лосося, мясом криля, авокадо, манго и соусом манго-чили в икре тобико.
+						Ролл №5: Ролл с лососем и масляной, сыром Филадельфия, Тамаго, болгарским перцем в кунжуте. 
+						Ролл №6 (2 шт.): Ролл с филе лосося, огурцом и кунжутом
+            		</div>
+       			</div>
+       			<div class="price-gift">
+       				<div class="price">39,90 руб</div>
+       			</div>
+       			<div class="price-cart cartJS" data-id="10">
+       				<div class="btn-buy">
+       					<span>В корзину</span>
+       				</div>
+       			</div>
+				</div>
+				<div class="product-item">
+					<a href="../product/16" class="product-img">
+						<img src="img/ramen.jpeg" alt="Рамен">
+					</a>
+					<div class="product-properties">
+            		<div class="product-title">
+                		<a href="../product/16">
+                    		Рамен
+                		</a>
+            		</div>
+            		<div class="product-top">
+                		<div class="product-weight">
+                     	340 г
+                  	</div>
+                  </div>
+           			<div class="product-description">
+                		Классический суп рамэн с яичной лапшой, пряной свинной грудинкой, маринованным яйцом и жареным кунжутом
+            		</div>
+       			</div>
+       			<div class="price-gift">
+       				<div class="price">9,90 руб</div>
+       			</div>
+       			<div class="price-cart cartJS" data-id="16">
+       				<div class="btn-buy">
+       					<span>В корзину</span>
+       				</div>
+       			</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<%- include("partials/footer.ejs") %>
+</body>
+</html>

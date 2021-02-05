@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DUCK DELIVERY</title>
+	<link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/main.css">
+	<script src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<%- include("partials/header.ejs") %>
+	<main>
+		<section class="products-filters">
+			<h1><%=hh%></h1>
+			<div class="catalog-filters">
+				<div class="sort-filter">
+					<span>Сортировать:</span>
+					<span class="sort-filter-toggle" onclick="openSort()"><%=span%></span>
+					<div id="sort-popup" class="filter-popup">
+						<ul>
+							<li><a href="?sort=popular">по популярности</a></li>
+							<li><a href="?sort=price_asc">по возрастанию цены</a></li>
+							<li><a href="?sort=price_desc">по убыванию цены</a></li>
+							<li><a href="?sort=alph">по алфавиту</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="catalog-products">
+			<div class="products-list">
+				<%for(let i = 0; i < goods.length; i++){%>
+				<div class="product-item">
+					<a href="../product/<%=goods[i].key%>" class="product-img">
+						<img src="../img/<%=goods[i].image%>" alt=<%=goods[i].name%>>
+					</a>
+					<div class="product-properties">
+						<div class="product-title">
+							<a href="../product/<%=goods[i].key%>">
+								<%=goods[i].name%>
+							</a>
+						</div>
+						<div class="product-top">
+							<div class="product-weight">
+								<%=goods[i].weight%>
+							  </div>
+						  </div>
+						   <div class="product-description">
+							<%=goods[i].description%>
+						</div>
+					   </div>
+					   <div class="price-gift">
+						   <div class="price"><%=goods[i].price.toFixed(2)%> руб</div>
+					   </div>
+					   <div class="price-cart cartJS" data-id="<%=goods[i].key%>">
+						   <div class="btn-buy">
+							   <span>В корзину</span>
+						   </div>
+					   </div>
+				</div>
+				<%}%>
+			</div>	
+		</section>
+	</main>
+	<%- include("partials/footer.ejs") %>
+</body>
+</html>

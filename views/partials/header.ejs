@@ -1,0 +1,198 @@
+<header>
+    <div class="timeBlock">
+        <span class="time"></span>
+    </div>
+    <div class="topMenu">
+        <div class="leftMenu">
+            <div class="phones">
+                
+                <span class="phones-toggle" onclick="openDelivery()"><span class="pc">Контакты</span><img src="../icons/tel.svg"><span class="arrow">▼</span></span>
+                <div id="delivery-popup" class="delivery-list-popup">
+                    <div class="contacts">
+                    <div class="title">Служба доставки:</div>
+                            <ul>
+                          <li>
+                                <a href="tel:+375(44)518-17-76" class="t44">(44) 518-17-76</a>
+                            </li>
+                          <li>
+                                <a href="tel:+375(33)175-17-54" class="t33">(33) 175-17-54</a>
+                            </li>
+                          <li>
+                                <a href="tel:+375(25)458-88-77" class="t25">(25) 445-88-77</a>
+                            </li>
+                          <li>
+                                <a href="tel:+375(17)378-30-35" class="t17">(17) 378-30-35</a>
+                            </li>       
+                            </ul>
+                            <a href="" class="callme">Заказать звонок</a>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurant">
+                <span class="restaurant-toggle" onclick="openRestaurant()">
+                    Рестораны <span class="arrow" style="font-size: 12px">▼</span></span>
+                <div id="restaurants-popup" class="restaurants-list-popup">
+                    <div class="adress">
+                        <ul>
+                            <li><a href="https://goo.gl/maps/yPgchdmsEuKaUpv16" target="_blank">проспект Независимости, 23</a></li>
+                            <li><a href="https://goo.gl/maps/4N9JrF8PBT7ykLh47" target="_blank">улица Немига, 12Б</a></li>
+                            <li><a href="https://goo.gl/maps/sqm5o112R9QwTzLy9" target="_blank">улица Максима Танка, 2</a></li>
+                            <li><a href="https://goo.gl/maps/hLDsgBnSQBXUgbjK7" target="_blank">улица Кирова, 1</a></li>
+                            <li><a href="https://goo.gl/maps/5S87HsCDhPypnxV69" target="_blank">улица Сурганова, 63</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightMenu">
+            <div class="like">
+                <a href="" class="like-toggle">
+                    <img src="../icons/like.svg" alt="Избранное">
+                </a>
+            </div>
+            <div class="cart">
+                <a href="#" class="cart-toggle">
+                    <img src="../icons/cart.svg" alt="Корзина">
+                    <span class="text">Корзина</span>
+                </a>
+            </div>
+        </div>
+        <div class="logo">
+            <a href="/">
+                <img src="../icons/logo.svg" alt="DUCK" title="DUCK">
+            </a>
+        </div>
+    </div>
+    <div id="category-menu"> 
+        <ul>
+            <li>
+                <%if(hh == "Пицца"){%>
+                <a href="/food-stock/pizza" class="active">
+                <% } else { %>
+                <a href="/food-stock/pizza">
+                <% } %>  
+                    <img src="../icons/pizza.svg" width="32" height="32" alt="Пицца" title="Пицца">
+                    <span>Пицца</span>
+                </a>
+            </li>
+            <li>
+                <%if(hh == "Суши"){%>
+                <a href="/food-stock/sushi" class="active">
+                <% } else { %>
+                <a href="/food-stock/sushi">
+                <% } %>  
+                    <img src="../icons/sushi.svg" width="32" height="32" alt="Суши" title="Суши">
+                    <span>Суши</span>
+                </a>
+            </li>
+            <li>
+                <%if(hh == "Супы"){%>
+                <a href="/food-stock/soups" class="active">
+                <% } else { %>
+                <a href="/food-stock/soups">
+                <% } %>  
+                    <img src="../icons/soup.svg" width="32" height="32" alt="Супы" title="Супы">
+                    <span>Супы</span>
+                </a>
+            </li>
+            <li>
+                <%if(hh == "Салаты"){%>
+                <a href="/food-stock/salad" class="active">
+                <% } else { %>
+                <a href="/food-stock/salad">
+                <% } %>  
+                    <img src="../icons/salad.svg" width="32" height="32" alt="Салаты" title="Салаты">
+                    <span>Салаты</span>
+                </a>
+            </li>
+            <li>
+                <%if(hh == "Десерты"){%>
+                <a href="/food-stock/sugar" class="active">
+                <% } else { %>
+                <a href="/food-stock/sugar">
+                <% } %>  
+                    <img src="../icons/cake.svg" width="32" height="32" alt="Десерты" title="Десерты">
+                    <span>Десерты</span>
+                </a>
+            </li>
+            <li>
+                <%if(hh == "Напитки"){%>
+                <a href="/food-stock/drink" class="active">
+                <% } else { %>
+                <a href="/food-stock/drink">
+                <% } %>  
+                    <img src="../icons/drink.svg" width="32" height="32" alt="Напитки" title="Напитки">
+                    <span>Напитки</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="popup fade" style="display: none;">
+        <div class="popup-container">
+            <a class="popup-close" href="#"></a>
+            <div class="popup-body">
+                <div class="title">Обратный звонок</div>
+                <form>
+                    <div class="text_callback">Заполните ваши данные и ожидайте звонка в ближайшее время.</div>
+                    <div class="form-field">
+                        <label>Имя:</label>
+                        <input type="text" required name="name">
+                    </div>
+                    <div class="form-field">
+                        <label>Телефон:</label>
+                        <input type="tel" required name="phone" pattern="\+?[0-9\s\-\(\)]+" maxlength="13">
+                    </div>
+                    <div class="form-field full-width">
+                        <label>Email:</label>
+                        <input type="email" required name="email">
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
+                <script>
+                    $("form").submit(function(){
+                        $('.popup').fadeOut(10);
+                        $('.ok-popup').fadeIn(10);
+                        var $form = $(this);
+                        $.post(
+                            $form.attr("/"),
+                            $form.serialize() 
+                        );
+                        return false;
+                    });
+                </script>
+            </div>
+        </div>		
+    </div>
+    <div class="ok-popup fade" style="display: none;">
+        <div class="ok-popup-container">
+            <a class="popup-close" href="#"></a>
+            <div class="popup-body">
+                <div class="title">Заявка принята!</div>
+            </div>
+        </div>		
+    </div>
+    <div class="like-popup fade" style="display: none;">
+        <div class="like-popup-container">
+            <a class="popup-close" href="#"></a>
+            <div class="popup-body">
+                <div class="title">Избранные товары:</div>
+                <div class="like-list">
+                    <div class="emptyText">Тут пока что пусто :(</div>
+                </div>
+            </div>
+        </div>		
+    </div>
+</header>
+
+<div id="cart" style="display: none;">
+    <div class="cart-container" style="display: none;">
+        <div class="title">Корзина</div>
+        <div class="item-list">
+        </div>
+        <div class="full-price">
+            <span>Сумма:</span>
+            <span class="total">0 руб</span>
+        </div>
+        <div class="checkout">Оформить</div>
+    </div>
+</div>
